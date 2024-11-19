@@ -1,0 +1,134 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.team-section {
+  background-color: $white;
+  margin-top: 70px;
+
+  .team-item {
+    margin: 0 12px;
+
+    .overlay {
+      padding: 16px;
+
+      .team-info {
+        background: rgba(21, 30, 41, 0.81);
+        transition: $transition;
+        padding: 40px;
+        opacity: 0;
+        visibility: hidden;
+        transform: scaleY(0);
+        transform-origin: top;
+
+        .name {
+          margin-bottom: 4px;
+          color: $white;
+        }
+
+        .designation {
+          color: $white;
+          opacity: 0.8;
+        }
+
+        .view-details {
+          color: $white;
+          width: 74px;
+          height: 74px;
+          margin-top: 33px;
+          border: 1px solid $border;
+
+          &:hover {
+            transform: scale(1.1);
+            border-color: $white;
+          }
+        }
+      }
+
+      .social-icon {
+        padding-top: 20px;
+        margin-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+        a {
+          color: $white;
+          opacity: 0.7;
+          font-size: 18px;
+          margin-right: 12px;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .team-info {
+        visibility: visible;
+        opacity: 1;
+        transform: scaleY(1);
+      }
+    }
+  }
+}
+
+.team_page {
+  .team-item {
+    margin: 0;
+  }
+}
+
+.global_search{
+  margin-bottom: 40px;
+  .input_group{
+    width: 100%;
+    label{
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    input{
+      width: 100%;
+      border: 1px solid $border;
+      border-radius: 15px;
+      height: 60px;
+      background: $bg;
+      padding: 0 24px;
+      transition: $transition;
+      &:focus{
+        border-color: $black;
+      }
+    }
+  }
+  button{
+    height: 60px;
+    padding: 0 40px;
+    background: $black;
+    border-radius: 15px;
+    border: 0;
+    color: $white;
+    font-size: 20px;
+    font-weight: 600;
+    &:hover{
+      background: $primary;
+      color: $black;
+    }
+  }
+}
+
+@media (max-width:1399.98px) {
+  .team-section .team-item .overlay .team-info {
+    padding: 24px;
+  }
+}
+
+@media (max-width:1199.98px) {
+  .team-section .team-item .overlay .team-info {
+    padding: 22px;
+  }
+}
+
+@media (max-width:767.98px) {
+  .team-section .team-item .overlay {
+    padding: 0;
+  }
+}

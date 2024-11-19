@@ -1,0 +1,103 @@
+.team_area {
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30.9375rem;
+    content: "";
+  }
+
+  .section-title-block {
+    p {
+      max-width: 29.625rem;
+      margin-left: auto;
+      margin-right: 1.875rem;
+    }
+  }
+
+  .team-item {
+    .image {
+      img {
+        transition: $transition;
+      }
+    }
+
+    .text {
+      margin-top: 1rem;
+
+      .name {
+        font-size: 26px;
+        font-weight: 600;
+        color: $black;
+        transition: $transition;
+      }
+
+      .designation {
+        margin-top: 0.25rem;
+      }
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+
+      .name {
+        color: $primary;
+      }
+    }
+  }
+
+}
+
+.faculty-profile-details .team-item {
+  position: sticky;
+  top: 120px;
+}
+
+.faculty-profile-details .img img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.faculty-profile-details .text .title h4 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #4e5e73;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.faculty-profile-details .text .title h4::before {
+  width: 70px;
+  height: 3px;
+  background-color: $black;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  content: "";
+  border-radius: 5px;
+}
+
+.faculty-profile-details .text {
+  background: #fff;
+  box-shadow: 0 5px 20px rgb(221 221 221 / 69%);
+  padding: 24px;
+}
+
+.faculty-profile-details .text p+p {
+  margin-top: 24px;
+}
+
+.faculty-profile-details .text ul {
+  padding-left: 14px;
+  margin: 30px 0;
+}
+
+.faculty-profile-details .text ul li{
+  font-weight: 500;
+  margin: 4px 0;
+}

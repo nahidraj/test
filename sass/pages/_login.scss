@@ -1,0 +1,82 @@
+.login-page {
+  width: 100%;
+}
+
+.login-page .login-main {
+  width: 100%;
+  height: 430px;
+  background-color: #fff;
+  border: 1px solid rgba(128, 61, 55, .2);
+}
+
+.login-page .login-main .logo {
+  width: 100%;
+  height: 460px;
+  background-color: $black;
+  border-radius: 7px;
+  margin-top: -15px;
+  padding: 40px;
+}
+
+.login-page .login-main .logo h1 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.login-page .login-main .logo span {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.login-page .form h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.login-page .form label {
+  font-size: 14px;
+  color: #0F1327;
+}
+
+.login-page .form label small {
+  font-size: 16px;
+  color: crimson;
+  margin-top: -3px;
+}
+
+.login-page .form input {
+  font-size: 16px;
+  color: #0F1327;
+  height: 42px;
+  border: 1px solid $border;
+
+  &:focus {
+    border-color: $black;
+  }
+}
+
+.login-page .form input::placeholder {
+  color: #A7A7A7;
+  font-size: 13px;
+}
+
+.login-page .form .forgot-pass {
+  color: #0F1327;
+  font-size: 16px;
+}
+
+.login-page .form .forgot-pass:hover {
+  text-decoration: underline;
+}
+
+.login-page .form button {
+  background-color: $primary;
+  font-size: 16px;
+  padding: 12px 30px;
+}
+
+.login-page .form button:hover {
+  background-color: $black;
+}

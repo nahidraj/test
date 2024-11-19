@@ -1,0 +1,296 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  margin: 0;
+  padding: 0;
+  font-family: "Saira", sans-serif;
+}
+
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+span {
+  display: inline-block;
+}
+
+a,
+button {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Saira", sans-serif;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+button {
+  transition: all 0.3s ease-out 0s;
+}
+
+body {
+  overflow-x: hidden;
+  @include font(16px, 400);
+  color: $black;
+  line-height: normal;
+  font-family: "Manrope", sans-serif;
+  line-height: 160%;
+}
+
+::selection {
+  background-color: $black;
+  color: $white;
+}
+
+p {
+  @include font(16px, 500);
+  color: $black;
+  line-height: 160%;
+}
+
+.mt-80 {
+  margin-top: 80px;
+}
+
+.mb-n80 {
+  margin-bottom: -80px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.py-80 {
+  padding: 80px 0;
+}
+
+
+/* Loader css */
+.fullpage_loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .loader {
+    width: 3.125rem;
+    aspect-ratio: 1;
+    display: grid;
+  }
+
+  .loader::before,
+  .loader::after {
+    content: "";
+    grid-area: 1/1;
+    --c: no-repeat radial-gradient(farthest-side, #03256D 92%, transparent);
+    background:
+      var(--c) 50% 0,
+      var(--c) 50% 100%,
+      var(--c) 100% 50%,
+      var(--c) 0 50%;
+    background-size: 0.75rem 0.75rem;
+    animation: l12 1s infinite;
+  }
+
+  .loader::before {
+    margin: 0.25rem;
+    filter: hue-rotate(45deg);
+    background-size: 0.5rem 0.5rem;
+    animation-timing-function: linear
+  }
+
+  @keyframes l12 {
+    100% {
+      transform: rotate(.5turn)
+    }
+  }
+}
+
+
+// reveal image
+.reveal_image {
+  visibility: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform-origin: left;
+  }
+}
+
+// Theme btn
+.theme_btn {
+  color: $white;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  background: transparent;
+  border: 1px solid $white;
+  min-width: 175px;
+  text-align: center;
+  border-radius: 8px;
+
+  &:hover {
+    border-color: $primary;
+    background-color: $primary;
+    color: $white;
+  }
+}
+
+.theme_btn.btn_dark {
+  border-color: $black;
+  color: $black;
+
+  &:hover {
+    color: $white;
+    border-color: $primary;
+  }
+}
+
+.theme_btn.btn_primary {
+  background-color: $primary;
+  color: $white;
+  border-color: $primary;
+
+  &:hover {
+    background: $black;
+  }
+}
+
+/* Section title css */
+.section-title-block {
+  margin-bottom: 40px;
+
+  .section-subtitle {
+    margin-bottom: 24px;
+  }
+
+  .section-title {
+    color: $black;
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 26px;
+    line-height: 120%;
+    position: relative;
+    display: inline-block;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: calc(100% - -20px);
+      transform: translateY(-50%);
+      width: 60px;
+      height: 2px;
+      background: $black;
+      content: "";
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: calc(100% - -80px);
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      ;
+      background: $primary;
+      border-radius: 50%;
+      content: "";
+    }
+  }
+}
+
+
+// line limit start
+.line-limit-1 {
+  @include line_limit (1 !important);
+}
+
+.line-limit-2 {
+  @include line_limit (2 !important);
+}
+
+.line-limit-3 {
+  @include line_limit (3 !important);
+}
+
+.line-limit-4 {
+  @include line_limit (4 !important);
+}
+
+.line-limit-5 {
+  @include line_limit (5 !important);
+}
+
+.line-limit-6 {
+  @include line_limit (6 !important);
+}
+
+.line-limit-7 {
+  @include line_limit (7 !important);
+}
+
+.line-limit-8 {
+  @include line_limit (8 !important);
+}
+
+.line-limit-9 {
+  @include line_limit (9 !important);
+}
+
+.line-limit-10 {
+  @include line_limit (10 !important);
+}
+
+@media (max-width:1199.98px) {
+  .section-title-block .section-title {
+    font-size: 36px;
+  }
+
+  .theme_btn {
+    padding: 16px 14px;
+  }
+}
+
+@media (max-width:767.98px) {
+  .section-title-block .section-title {
+    font-size: 30px;
+  }
+}

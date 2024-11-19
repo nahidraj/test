@@ -1,0 +1,113 @@
+.about_us_area {
+  .about_image {
+
+    .vidplay {
+      width: 80px;
+      height: 80px;
+      color: $primary;
+      background-color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      border-radius: 50%;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.4);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        z-index: -1;
+      }
+    }
+  }
+
+  .about_text {
+    padding: 80px;
+    position: relative;
+    z-index: 9;
+    height: 100%;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 88%;
+      height: 85%;
+      border: 2px dashed $black;
+      content: "";
+      z-index: -1;
+    }
+
+    p {
+      margin-bottom: 30px;
+      color: $black;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+    }
+  }
+}
+
+@media (max-width:1399.98px) {
+  .about_us_area .about_text {
+    padding: 60px;
+  }
+
+  .about_us_area .about_text::before {
+    width: 91%;
+    height: 90%;
+  }
+
+  .about_us_area .about_text p {
+    -webkit-line-clamp: 7 !important;
+  }
+}
+
+@media (max-width:1199.98px) {
+  .about_us_area .about_text {
+    padding: 50px;
+  }
+
+  .about_us_area .about_text p {
+    font-size: 18px;
+    -webkit-line-clamp: 6 !important;
+  }
+}
+
+@media (max-width:991.98px) {
+  .about_us_area .about_text {
+    padding: 55px 70px;
+  }
+
+  .about_us_area .about_text p {
+    -webkit-line-clamp: unset !important;
+  }
+
+  .about_us_area .about_text::before {
+    width: 91%;
+    height: 86%;
+  }
+}
+
+@media (max-width:767.98px) {
+  .about_us_area .about_text {
+    padding: 65px 60px;
+  }
+}
+
+@media (max-width:575.98px) {
+  .about_us_area .about_text::before {
+    display: none;
+  }
+
+  .about_us_area .about_text {
+    padding: 24px;
+  }
+}

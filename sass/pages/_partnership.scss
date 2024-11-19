@@ -1,0 +1,41 @@
+
+.partnership {
+
+  .partnership-item {
+    margin-bottom: 24px;
+
+    .image {
+      padding: 30px;
+      border: 1px solid #cacaca;
+      height: 234px;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+        object-fit: contain;
+        transition: all linear .2s;
+      }
+    }
+
+    .text {
+
+      h5 {
+        color: $white;
+        background-color: $primary;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 20px;
+
+      }
+    }
+
+    &:hover {
+      .image {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

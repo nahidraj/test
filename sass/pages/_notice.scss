@@ -1,0 +1,71 @@
+.notice_page{
+  .notice {
+    width: 100%;
+    background-color: $white;
+    padding: 30px;
+    background-color: $white;
+  
+    ul {
+      background-color: #f2f2f2;
+      margin-bottom: 14px;
+      position: relative;
+      height: 65px;
+  
+      li.date {
+        background-color: $primary;
+        color: $white;
+        width: 80px;
+        padding: 10px 0;
+        font-size: 14px;
+        font-weight: 700;
+        position: absolute;
+        line-height: 160%;
+        top: 0;
+        left: 0;
+      }
+  
+      li.info {
+        padding: 14px;
+        padding-right: 80px;
+        padding-left: 100px;
+  
+  
+        a {
+          color: $black;
+          transition: all linear .2s;
+          font-size: 16px;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+  
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+  
+      li.pdf {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+  
+        a {
+          width: 50px;
+          height: 50px;
+          background-color: $black;
+          text-align: center;
+          line-height: 50px;
+          border-radius: 50%;
+          font-size: 20px;
+          color: $white;
+        }
+      }
+  
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
